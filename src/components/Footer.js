@@ -5,45 +5,17 @@ import Instagram from '../images/instagram.svg';
 import LinkedIn from '../images/linkedin.svg';
 
 import styled from 'styled-components';
-import Button from './shared/Button';
-import Animoji from '../images/footerImg.png';
-import { BetweenWrapper, H3, P2 } from '../components/shared/global';
+import { BetweenWrapper, H4, P } from '../components/shared/global';
+import { Grid, Col12, Col6, Col8 } from '../components/shared/grid';
 
 const StyledFooter = styled.footer`
-	background-color: #fafafa;
+	background-color: #202020;
 	display: block;
 	float: left;
 	width: 100%;
-`;
-
-const FooterWrapper = styled.div`
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	justify-content: center;
-	height: 80vh;
-`;
-const FooterContent = styled.div`
-	max-width: 600px;
-`;
-
-const Copyright = styled.div`
-	background-color: #111;
-	color: #fafafa;
-	padding: 0rem 2rem;
-`;
-
-const StyledAnimoji = styled.img`
-	height: 2.5rem;
-	margin-right: 1rem;
-`;
-const CopyText = styled.div`
-	display: flex;
-	align-items: center;
-
-	@media (max-width: 375px) {
-		display: block;
-	}
+	color: #fff;
+	padding: 2rem;
+	font-family: halyard-display, sans-serif;
 `;
 
 const SocialLogo = styled.img`
@@ -53,51 +25,97 @@ const SocialLogo = styled.img`
 `;
 
 const A = styled.a`
-	text-decoration: none;
+	text-decoration: underline;
 	color: #fafafa;
+`;
+
+const StyledCol12 = styled(Col12)`
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+`;
+
+const StyledH4 = styled(H4)`
+	font-weight: 400;
+	font-size: 4rem;
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
+	text-transform: none;
+	font-family: moret, serif;
+	line-height: 4.75rem;
+
+	@media (max-width: 400px) {
+		font-size: 2.25rem;
+		line-height: 3rem;
+	}
+
+	@media (min-width: 401px) and (max-width: 800px) {
+		font-size: 3rem;
+		line-height: 4rem;
+	}
+`;
+
+const StyledBW = styled(BetweenWrapper)`
+	@media (max-width: 800px) {
+		flex-direction: column;
+		text-align: left;
+		align-items: flex-start;
+	}
 `;
 
 const Footer = () => {
 	return (
 		<StyledFooter>
-			<FooterWrapper>
-				<FooterContent>
-					<H3>Want to work together?</H3>
-					<P2>
+			<Grid>
+				<Col8>
+					<StyledH4>
 						I create, design, and build digital solutions for modern problems.
-						Currently looking for full-time opportunities beginning May 2021.
-					</P2>
-					<Button primary>Contact Me</Button>
-				</FooterContent>
-			</FooterWrapper>
-			<Copyright>
-				<BetweenWrapper>
-					<CopyText>
-						<StyledAnimoji src={Animoji}></StyledAnimoji>
-						<P2> Designed and built by Roneilla Bumanlag © 2021</P2>
-					</CopyText>
+						Currently looking for full-time opportunities beginning May 2021.{' '}
+						<A href="mailto:roneillabumanlag@gmail.com"> Let’s talk!</A>
+					</StyledH4>
+				</Col8>
+				<StyledCol12>
+					<StyledBW>
+						<P
+							style={{
+								textTransform: 'uppercase',
+								fontSize: '1rem',
+								padding: '1rem 0',
+								margin: '0',
+								lineHeight: '1.25rem',
+							}}>
+							Designed and built by<br></br>Roneilla Bumanlag © 2021
+						</P>
 
-					<A href="mailto:roneillabumanlag@gmail.com">
-						roneillabumanlag@gmail.com
-					</A>
+						<A
+							href="mailto:roneillabumanlag@gmail.com"
+							style={{
+								textTransform: 'uppercase',
+								fontSize: '1.25rem',
+								padding: '1rem 0',
+							}}>
+							roneillabumanlag@gmail.com
+						</A>
 
-					<span style={{ display: 'inline-block' }}>
-						<a href="https://www.instagram.com/eillamadethis/" target="_blank">
-							<SocialLogo src={Instagram}></SocialLogo>
-						</a>
-						<a href="https://dribbble.com/roneilla" target="_blank">
-							<SocialLogo src={Dribbble}></SocialLogo>
-						</a>
+						<span style={{ display: 'inline-block', padding: '1rem 0' }}>
+							<a
+								href="https://www.instagram.com/eillamadethis/"
+								target="_blank">
+								<SocialLogo src={Instagram}></SocialLogo>
+							</a>
+							<a href="https://dribbble.com/roneilla" target="_blank">
+								<SocialLogo src={Dribbble}></SocialLogo>
+							</a>
 
-						<a href="https://github.com/roneilla" target="_blank">
-							<SocialLogo src={Github}></SocialLogo>
-						</a>
-						<a href="https://www.linkedin.com/in/roneilla/" target="_blank">
-							<SocialLogo src={LinkedIn}></SocialLogo>
-						</a>
-					</span>
-				</BetweenWrapper>
-			</Copyright>
+							<a href="https://github.com/roneilla" target="_blank">
+								<SocialLogo src={Github}></SocialLogo>
+							</a>
+							<a href="https://www.linkedin.com/in/roneilla/" target="_blank">
+								<SocialLogo src={LinkedIn}></SocialLogo>
+							</a>
+						</span>
+					</StyledBW>
+				</StyledCol12>
+			</Grid>
 		</StyledFooter>
 	);
 };

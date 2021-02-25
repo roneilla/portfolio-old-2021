@@ -1,27 +1,31 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import Button from './shared/Button';
-import { ReactComponent as Logo } from '../images/roneilla-dark.svg';
-import { ReactComponent as LogoLight } from '../images/roneilla-light.svg';
+import { ReactComponent as Logo } from '../images/roneillabumanlag-logo.svg';
+import { ReactComponent as SayHello } from '../images/say-hello.svg';
+import { Grid, Col1 } from '../components/shared/grid';
+import { A } from '../components/shared/global';
 
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Nav = styled.nav`
-	height: 75px;
-	padding: 1rem 2rem;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	background-color: ${({ primary }) => (primary ? '#111' : '#fff')};
-	color: ${({ primary }) => (primary ? '#fafafa' : '#111')};
+	padding: 2rem 2rem;
+	background-color: transparent;
 `;
 
 const NavMenu = styled.ul`
-	display: inline-flex;
-	width: 425px;
 	list-style-type: none;
+	display: inline-flex;
+	grid-column: 7 / 11;
 	justify-content: space-between;
-	align-items: center;
+
+	@media (max-width: 600px) {
+		display: none;
+	}
+
+	@media (max-width: 1100px) {
+		grid-column: 5/11;
+	}
 `;
 
 const NavItem = styled.li`
@@ -30,26 +34,56 @@ const NavItem = styled.li`
 
 const StyledLink = styled(Link)`
 	text-decoration: none;
-	color: ${({ primary }) => (primary ? '#fafafa' : '#111')};
+	color: #202020;
+	font-family: halyard-display, sans-serif;
+	font-size: 1.25rem;
+	text-transform: uppercase;
 `;
 
-const StyledLogo = styled(LogoLight)`
-	width: 5rem;
+const StyledLogo = styled(Logo)`
+	width: 100%;
+	justify-self: start;
+	align-self: start;
 `;
 
-const StyledLogoD = styled(Logo)`
-	width: 5rem;
+const StyledContact = styled(SayHello)`
+	width: 100px;
+	position: fixed;
+	right: 2rem;
+	top: 2rem;
+	z-index: 1001;
 `;
 
-const NavBar = ({ primary }) => {
-	const location = useLocation();
+const LogoContainer = styled.div`
+	width: 100px;
+	@media (min-width: 401px) {
+		position: fixed;
+		top: 2rem;
+		left: 2rem;
+	}
+`;
 
-	if (location.pathname == '/') {
-		return (
-			<Nav primary>
+const NavBar = () => {
+	const imageRef = useRef();
+
+	useEffect(() => {
+		window.addEventListener('scroll', (event) => {
+			requestAnimationFrame(() => {
+				const rotation = window.scrollY / 5;
+				imageRef.current.style.transform = `rotate(${rotation}deg)`;
+			});
+		});
+	}, []);
+
+	return (
+		<Nav>
+			<LogoContainer>
 				<Link to="/">
 					<StyledLogo></StyledLogo>
 				</Link>
+			</LogoContainer>
+
+			<Grid>
 				<NavMenu>
 					<NavItem>
 						<StyledLink primary="true" to="/casestudies">
@@ -58,7 +92,7 @@ const NavBar = ({ primary }) => {
 					</NavItem>
 					<NavItem>
 						<StyledLink primary="true" to="/projects">
-							Projects
+							Work
 						</StyledLink>
 					</NavItem>
 					<NavItem>
@@ -66,35 +100,20 @@ const NavBar = ({ primary }) => {
 							About
 						</StyledLink>
 					</NavItem>
-					<NavItem>
-						<Button>Say Hello</Button>
-					</NavItem>
 				</NavMenu>
-			</Nav>
-		);
-	} else {
-		return (
-			<Nav>
-				<Link to="/">
-					<StyledLogoD></StyledLogoD>
-				</Link>
-				<NavMenu>
-					<NavItem>
-						<StyledLink to="/casestudies">Case Studies</StyledLink>
-					</NavItem>
-					<NavItem>
-						<StyledLink to="/projects">Projects</StyledLink>
-					</NavItem>
-					<NavItem>
-						<StyledLink to="/about">About</StyledLink>
-					</NavItem>
-					<NavItem>
-						<Button primary>Say Hello</Button>
-					</NavItem>
-				</NavMenu>
-			</Nav>
-		);
-	}
+
+				<A
+					href="mailto:roneillabumanlag@gmail.com"
+					style={{
+						textTransform: 'uppercase',
+						fontSize: '1.25rem',
+						padding: '1rem 0',
+					}}>
+					<StyledContact ref={imageRef}></StyledContact>
+				</A>
+			</Grid>
+		</Nav>
+	);
 };
 
 export default NavBar;

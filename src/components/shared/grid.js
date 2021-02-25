@@ -8,24 +8,32 @@ export const Grid = styled.div`
 
 export const Col12 = styled.div`
 	grid-column: span 12;
-	padding-left: 2rem;
-	padding-right: 2rem;
+`;
+
+export const Col10 = styled.div`
+	grid-column: span 10;
 `;
 
 export const Col8 = styled.div`
 	grid-column: span 8;
+	@media (max-width: 800px) {
+		grid-column: span 12;
+	}
 `;
 
 export const Col6 = styled.div`
 	grid-column: span 6;
 
-	@media (max-width: 768px) {
+	@media (max-width: 800px) {
 		grid-column: span 12;
 	}
 `;
 
 export const Col4 = styled.div`
 	grid-column: span 4;
+	@media (max-width: 800px) {
+		grid-column: span 12;
+	}
 `;
 
 export const Col3 = styled.div`
@@ -36,6 +44,6 @@ export const Col2 = styled.div`
 	grid-column: span 2;
 `;
 
-export const Col8_Ctr = styled.div`
-	grid-column: 3/11;
+export const Col1 = styled.div`
+	grid-column: span 1;
 `;

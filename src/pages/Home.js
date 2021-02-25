@@ -11,93 +11,119 @@ import {
 	P2,
 	Caption,
 } from '../components/shared/global';
-import { Grid, Col6 } from '../components/shared/grid';
+import { Grid, Col6, Col12 } from '../components/shared/grid';
 import Label from '../components/shared/Label';
 import ProjectCard from '../components/ProjectCard';
 import Tippt from '../images/tippt-thumbnail.png';
-import Doodle from '../images/doodle-thumbnail.png';
+import Doodle from '../images/doodle-thumbnail.jpg';
 
-const Header = styled.div`
-	color: ${(props) => props.theme.light};
-	height: calc(100vh - 15rem);
-	background-color: ${(props) => props.theme.dark};
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-`;
-
-const Title = styled.div`
-	font-size: 5rem;
-	width: 100%;
-	letter-spacing: -2px;
-	@media (max-width: 375px) {
-		font-size: 3rem;
+const Header = styled(Grid)`
+	color: #202020;
+	height: calc(100vh - 200px);
+	margin-top: 50px;
+	padding: 2rem;
+	@media (max-width: 400px) {
+		height: auto;
+		margin-top: 8rem;
+		margin-bottom: 6rem;
 	}
 `;
 
-const Subtitle = styled.div`
-	font-size: 1.25rem;
-	color: ${(props) => props.theme.grey};
-	font-family: ${(props) => props.theme.secondaryFont};
+const Title = styled(Col6)`
+	font-size: 10rem;
 	width: 100%;
+	line-height: 9rem;
+	font-family: moret, serif;
+	color: #202020;
+	transition: 0.2s ease;
+	@media (max-width: 400px) {
+		font-size: 4rem;
+		line-height: 4rem;
+		margin-bottom: 1rem;
+	}
+
+	@media (min-width: 401px) and (max-width: 1200px) {
+		font-size: 8rem;
+		line-height: 8.5rem;
+	}
+`;
+
+const Subtitle = styled(Col6)`
+	font-size: 2.75rem;
+	color: #202020;
+	font-family: halyard-display, sans-serif;
+	text-align: right;
+	text-transform: uppercase;
+	align-self: end;
+	justify-self: end;
+	font-weight: 500;
+
+	@media (max-width: 400px) {
+		font-size: 1.5rem;
+	}
+	@media (min-width: 401px) and (max-width: 1200px) {
+		font-size: 2.5rem;
+	}
+	@media (max-width: 768px) {
+		text-align: left;
+		align-self: start;
+		justify-self: start;
+	}
 `;
 
 const SelectedProjects = styled.div`
-	color: ${(props) => props.theme.dark};
+	color: #202020;
 	padding: 2rem 0;
 `;
 
+const ProjectsTitle = styled(Col12)`
+	border-bottom: 2px #202020 solid;
+`;
+
 const StyledH3 = styled(H3)`
-	text-align: center;
-	font-family: ${(props) => props.theme.secondaryFont};
-	margin: 2rem 0;
+	@media (max-width: 400px) {
+		font-size: 2rem;
+		line-height: 3rem;
+	}
 `;
-
-const ProjectsContainer = styled.div`
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: flex-start;
-	align-items: center;
-`;
-
 const Home = () => {
 	return (
 		<div>
 			<Header>
-				<Container>
-					<Title>Hello! I'm an Interaction Designer based in Toronto.</Title>
-					<Subtitle>Currently UX @ Tippt and VeganHive</Subtitle>
-				</Container>
+				<Title>Roneilla Bumanlag</Title>
+				<Subtitle>
+					Interaction Designer based in Toronto. open to full-time and freelance
+					opportunities
+				</Subtitle>
 			</Header>
 			<SelectedProjects>
 				<Container>
-					<StyledH3>Selected Work</StyledH3>
 					<Grid>
-						<Col6>
+						<ProjectsTitle>
+							<StyledH3>Featured Work</StyledH3>
+						</ProjectsTitle>
+						<Col12>
 							<ProjectCard
 								bgColor="#D1F0CE"
 								tintColor="#C1E7BD"
 								title="Tippt"
-								description="UX Design"
+								description="Helping users make greener choices through a sustainability platform"
+								category="UX Design"
 								color="black"
 								img={Tippt}
-								link="/tippt"
-								customX="center"
-								customY="center"></ProjectCard>
-						</Col6>
-						<Col6>
+								link="/tippt"></ProjectCard>
+						</Col12>
+						<Col12>
 							<ProjectCard
 								bgColor="#D8E9FF"
 								tintColor="#BFD3ED"
 								title="Google Doodle VR"
-								description="AR/VR"
+								description="Rethinking Google Doodles to create an immersive experience celebrating 50 years of VR"
+								category="AR/VR"
 								color="black"
 								img={Doodle}
-								link="/doodlevr"
-								customX="center"
-								customY="center"></ProjectCard>
-						</Col6>
+								link="/doodlevr"></ProjectCard>
+						</Col12>
 					</Grid>
 				</Container>
 			</SelectedProjects>

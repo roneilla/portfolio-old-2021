@@ -22,34 +22,36 @@ export const BetweenWrapper = styled.div`
 
 export const H1 = styled.h1`
 	font-size: 6rem;
-	font-weight: 400;
+	font-weight: 500;
 	margin-top: 1rem;
 	margin-bottom: 1rem;
-	letter-spacing: -1px;
+	font-family: moret, serif;
 `;
 
 export const H2 = styled.h2`
 	font-size: 4rem;
-	font-weight: 400;
+	font-weight: 500;
 	margin-top: 1rem;
 	margin-bottom: 1rem;
-	letter-spacing: -1px;
+	font-family: moret, serif;
 `;
 
 export const H3 = styled.h3`
 	font-size: 3rem;
-	font-weight: 400;
+	font-weight: 500;
 	margin-top: 1rem;
 	margin-bottom: 1rem;
-	letter-spacing: -1px;
+	font-family: halyard-display, sans-serif;
+	text-transform: uppercase;
 `;
 
-export const H4 = styled.h3`
+export const H4 = styled.h4`
 	font-size: 2.25rem;
-	font-weight: 400;
+	font-weight: 500;
 	margin-top: 1rem;
 	margin-bottom: 1rem;
-	letter-spacing: -1px;
+	font-family: halyard-display, sans-serif;
+	text-transform: uppercase;
 `;
 
 export const P = styled.p`
@@ -57,6 +59,7 @@ export const P = styled.p`
 	line-height: 2rem;
 	margin-top: 1rem;
 	margin-bottom: 1rem;
+	font-family: halyard-display, sans-serif;
 `;
 
 export const P2 = styled.p`
@@ -64,6 +67,7 @@ export const P2 = styled.p`
 	margin-top: 1rem;
 	margin-bottom: 1rem;
 	line-height: 2rem;
+	font-family: halyard-display, sans-serif;
 `;
 
 export const Caption = styled.p`
@@ -72,13 +76,16 @@ export const Caption = styled.p`
 	font-style: italic;
 	margin-top: 1rem;
 	margin-bottom: 1rem;
+	font-family: halyard-display, sans-serif;
 `;
 
 export const A = styled.a`
 	text-decoration: none;
 	color: #fafafa;
+	font-family: halyard-display, sans-serif;
 `;
 
 export const GreyBG = styled.div`
 	background-color: #fafafa;
+	font-family: halyard-display, sans-serif;
 `;
