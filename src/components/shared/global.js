@@ -62,14 +62,6 @@ export const P = styled.p`
 	font-family: halyard-display, sans-serif;
 `;
 
-export const P2 = styled.p`
-	font-size: 1rem;
-	margin-top: 1rem;
-	margin-bottom: 1rem;
-	line-height: 2rem;
-	font-family: halyard-display, sans-serif;
-`;
-
 export const Caption = styled.p`
 	font-size: 1rem;
 	color: #999999;
@@ -77,6 +69,7 @@ export const Caption = styled.p`
 	margin-top: 1rem;
 	margin-bottom: 1rem;
 	font-family: halyard-display, sans-serif;
+	text-align: center;
 `;
 
 export const A = styled.a`
@@ -88,4 +81,35 @@ export const A = styled.a`
 export const GreyBG = styled.div`
 	background-color: #fafafa;
 	font-family: halyard-display, sans-serif;
+`;
+
+export const StickyDiv = styled.div`
+	@media (min-width: 800px) {
+		position: sticky;
+		top: calc(3rem + 60px);
+		align-self: start;
+		display: block;
+	}
+`;
+
+export const Section = styled.section`
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+	border-bottom: 2px #202020 solid;
+`;
+
+export const SmallSection = styled.section`
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+`;
+
+export const MediumSection = styled.section`
+	padding-top: 10rem;
+	padding-bottom: 5rem;
+`;
+
+export const StyledImg = styled.img`
+	width: 100%;
+	object-fit: contain;
+	margin: 1rem 0;
 `;

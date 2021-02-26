@@ -8,7 +8,6 @@ import {
 	H3,
 	H4,
 	P,
-	P2,
 	Caption,
 } from '../components/shared/global';
 import { Grid, Col6, Col12 } from '../components/shared/grid';
@@ -16,6 +15,7 @@ import Label from '../components/shared/Label';
 import ProjectCard from '../components/ProjectCard';
 import Tippt from '../images/tippt-thumbnail.png';
 import Doodle from '../images/doodle-thumbnail.jpg';
+import { Link } from 'react-router-dom';
 
 const Header = styled(Grid)`
 	color: #202020;
@@ -86,16 +86,24 @@ const StyledH3 = styled(H3)`
 		line-height: 3rem;
 	}
 `;
+
+const StyledLink = styled(Link)`
+	text-decoration: none;
+	color: #202020;
+`;
+
 const Home = () => {
 	return (
 		<div>
-			<Header>
-				<Title>Roneilla Bumanlag</Title>
-				<Subtitle>
-					Interaction Designer based in Toronto. open to full-time and freelance
-					opportunities
-				</Subtitle>
-			</Header>
+			<Container>
+				<Header>
+					<Title>Roneilla Bumanlag</Title>
+					<Subtitle>
+						Interaction Designer based in Toronto. open to full-time and
+						freelance opportunities
+					</Subtitle>
+				</Header>
+			</Container>
 			<SelectedProjects>
 				<Container>
 					<Grid>
@@ -103,26 +111,22 @@ const Home = () => {
 							<StyledH3>Featured Work</StyledH3>
 						</ProjectsTitle>
 						<Col12>
-							<ProjectCard
-								bgColor="#D1F0CE"
-								tintColor="#C1E7BD"
-								title="Tippt"
-								description="Helping users make greener choices through a sustainability platform"
-								category="UX Design"
-								color="black"
-								img={Tippt}
-								link="/tippt"></ProjectCard>
+							<StyledLink to="/tippt">
+								<ProjectCard
+									title="Tippt"
+									description="Helping users make greener choices through a sustainability platform"
+									category="UX Design"
+									img={Tippt}></ProjectCard>
+							</StyledLink>
 						</Col12>
 						<Col12>
-							<ProjectCard
-								bgColor="#D8E9FF"
-								tintColor="#BFD3ED"
-								title="Google Doodle VR"
-								description="Rethinking Google Doodles to create an immersive experience celebrating 50 years of VR"
-								category="AR/VR"
-								color="black"
-								img={Doodle}
-								link="/doodlevr"></ProjectCard>
+							<StyledLink to="/doodlevr">
+								<ProjectCard
+									title="Google Doodle VR"
+									description="Rethinking Google Doodles to create an immersive experience celebrating 50 years of VR"
+									category="AR/VR"
+									img={Doodle}></ProjectCard>
+							</StyledLink>
 						</Col12>
 					</Grid>
 				</Container>

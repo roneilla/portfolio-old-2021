@@ -3,7 +3,8 @@ import styled from 'styled-components';
 
 const LabelText = styled.p`
 	margin-bottom: 2rem;
-	font-family: ${(props) => props.theme.secondaryFont};
+	font-family: halyard-display, sans-serif;
+	text-transform: uppercase;
 `;
 
 const Label = ({ text }) => {

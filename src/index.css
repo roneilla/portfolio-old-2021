@@ -13,3 +13,11 @@ body {
 	margin: 0;
 	padding: 0;
 }
+
+#tippt {
+	background-image: url('./images/tippt-thumbnail.png');
+}
+
+#doodlevr {
+	background-image: url('./images/doodle-thumbnail.jpg');
+}

@@ -8,50 +8,60 @@ import {
 	H3,
 	H4,
 	P,
-	P2,
 	Caption,
 } from '../components/shared/global';
+import Label from '../components/shared/Label';
 
 import { Grid } from '../components/shared/grid';
 
+const StyledGrid = styled(Grid)`
+	grid-template-rows: repeat(2, 1fr);
+	grid-row-gap: 3rem;
+`;
+
 const StyledProjectHeader = styled.div`
 	width: 100%;
-	padding-top: 10rem;
-	padding-bottom: 10rem;
+	padding-top: 8rem;
+	padding-bottom: 8rem;
+	border-bottom: 2px #202020 solid;
 `;
 
-const Header = styled.div`
-	grid-column: 3 / 11;
-	padding-top: 2rem;
-	padding-bottom: 2rem;
+const Description = styled(P)`
+	grid-column: span 6;
+	grid-row: span 2;
+	white-space: pre-line;
 `;
 
-const DescTitle = styled.h6`
-	font-size: 1rem;
+const DescTitle = styled(H4)`
 	margin-top: 1rem;
-	margin-bottom: 0rem;
-	line-height: 2rem;
-	font-family: ${(props) => props.theme.secondaryFont};
+	margin-bottom: 1rem;
+	padding-bottom: 1rem;
+	font-family: halyard-display, sans-serif;
+	border-bottom: 2px #202020 solid;
 `;
 
 const Date = styled.div`
-	grid-column: 3 / 5;
+	grid-column: span 3;
+	grid-row: span 1;
 `;
 
 const Roles = styled.div`
-	grid-column: 5 / 7;
+	grid-column: span 3;
+	grid-row: span 1;
 `;
 
 const Tools = styled.div`
-	grid-column: 7 / 9;
+	grid-column: span 3;
+	grid-row: span 1;
 `;
 
 const Collaborators = styled.div`
-	grid-column: 9 / 11;
+	grid-column: span 3;
+	grid-row: span 1;
 `;
 
 const ProjectHeader = ({
-	name,
+	label,
 	description,
 	date,
 	roles,
@@ -61,29 +71,28 @@ const ProjectHeader = ({
 	return (
 		<StyledProjectHeader>
 			<Container>
-				<Grid>
-					<Header>
-						<H1>{name}</H1>
-						<P>{description}</P>
-					</Header>
-
+				<StyledGrid>
+					<Description>
+						<Label text={label}></Label>
+						{description}
+					</Description>
 					<Date>
 						<DescTitle>Date</DescTitle>
-						<P2>{date}</P2>
+						<P>{date}</P>
 					</Date>
 					<Roles>
 						<DescTitle>Roles</DescTitle>
-						<P2>{roles}</P2>
+						<P>{roles}</P>
 					</Roles>
 					<Tools>
 						<DescTitle>Tools</DescTitle>
-						<P2>{tools}</P2>
+						<P>{tools}</P>
 					</Tools>
 					<Collaborators>
 						<DescTitle>Collaborators</DescTitle>
-						<P2>{collaborators}</P2>
+						<P>{collaborators}</P>
 					</Collaborators>
-				</Grid>
+				</StyledGrid>
 			</Container>
 		</StyledProjectHeader>
 	);

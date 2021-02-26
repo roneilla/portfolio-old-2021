@@ -15,11 +15,6 @@ const StyledImg = styled.img`
 	margin: 2rem 0;
 `;
 
-const StyledLink = styled(Link)`
-	text-decoration: none;
-	color: #202020;
-`;
-
 const Title = styled.h1`
 	font-size: 4rem;
 	font-weight: 500;
@@ -60,23 +55,21 @@ const TextContainer = styled.div`
 const ProjectCard = ({ img, title, description, category, link }) => {
 	return (
 		<Div>
-			<StyledLink to={link}>
-				<Grid>
-					<Col4>
-						<TextContainer>
-							<span style={{ display: 'block', width: '100%' }}>
-								<Title>{title}</Title>
-								<Description>{description}</Description>
-							</span>
+			<Grid>
+				<Col4>
+					<TextContainer>
+						<span style={{ display: 'block', width: '100%' }}>
+							<Title>{title}</Title>
+							<Description>{description}</Description>
+						</span>
 
-							<Category>{category}</Category>
-						</TextContainer>
-					</Col4>
-					<Col8>
-						<StyledImg src={img}></StyledImg>
-					</Col8>
-				</Grid>
-			</StyledLink>
+						<Category>{category}</Category>
+					</TextContainer>
+				</Col4>
+				<Col8>
+					<StyledImg src={img}></StyledImg>
+				</Col8>
+			</Grid>
 		</Div>
 	);
 };

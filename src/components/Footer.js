@@ -98,18 +98,28 @@ const Footer = () => {
 
 						<span style={{ display: 'inline-block', padding: '1rem 0' }}>
 							<a
+								rel="noreferrer"
 								href="https://www.instagram.com/eillamadethis/"
 								target="_blank">
 								<SocialLogo src={Instagram}></SocialLogo>
 							</a>
-							<a href="https://dribbble.com/roneilla" target="_blank">
+							<a
+								rel="noreferrer"
+								href="https://dribbble.com/roneilla"
+								target="_blank">
 								<SocialLogo src={Dribbble}></SocialLogo>
 							</a>
 
-							<a href="https://github.com/roneilla" target="_blank">
+							<a
+								rel="noreferrer"
+								href="https://github.com/roneilla"
+								target="_blank">
 								<SocialLogo src={Github}></SocialLogo>
 							</a>
-							<a href="https://www.linkedin.com/in/roneilla/" target="_blank">
+							<a
+								rel="noreferrer"
+								href="https://www.linkedin.com/in/roneilla/"
+								target="_blank">
 								<SocialLogo src={LinkedIn}></SocialLogo>
 							</a>
 						</span>
