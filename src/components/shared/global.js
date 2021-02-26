@@ -24,7 +24,7 @@ export const H1 = styled.h1`
 	font-size: 6rem;
 	font-weight: 500;
 	margin-top: 1rem;
-	margin-bottom: 1rem;
+	margin-bottom: 4rem;
 	font-family: moret, serif;
 `;
 
@@ -32,7 +32,7 @@ export const H2 = styled.h2`
 	font-size: 4rem;
 	font-weight: 500;
 	margin-top: 1rem;
-	margin-bottom: 1rem;
+	margin-bottom: 3rem;
 	font-family: moret, serif;
 `;
 
@@ -40,7 +40,7 @@ export const H3 = styled.h3`
 	font-size: 3rem;
 	font-weight: 500;
 	margin-top: 1rem;
-	margin-bottom: 1rem;
+	margin-bottom: 2rem;
 	font-family: halyard-display, sans-serif;
 	text-transform: uppercase;
 `;
@@ -49,8 +49,17 @@ export const H4 = styled.h4`
 	font-size: 2.25rem;
 	font-weight: 500;
 	margin-top: 1rem;
-	margin-bottom: 1rem;
+	margin-bottom: 2rem;
 	font-family: halyard-display, sans-serif;
+	text-transform: uppercase;
+`;
+
+export const H5 = styled.h5`
+	font-size: 1.75rem;
+	font-family: halyard-display, sans-serif;
+	font-weight: 500;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 	text-transform: uppercase;
 `;
 

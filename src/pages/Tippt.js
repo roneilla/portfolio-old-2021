@@ -16,7 +16,7 @@ import {
 	SmallSection,
 	StyledImg,
 } from '../components/shared/global';
-import { Grid, Col6, Col12 } from '../components/shared/grid';
+import { Grid, Col6, Col12, Col8, Col10 } from '../components/shared/grid';
 import Label from '../components/shared/Label';
 
 import ProjectHeader from '../components/ProjectHeader';
@@ -95,10 +95,41 @@ const HorizontalDiv = styled.div`
 	overflow-x: scroll;
 	overflow-y: hidden;
 	white-space: nowrap;
+	position: relative;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+
 	&::-webkit-scrollbar {
 		display: none;
 	}
+
 	/* cursor: e-resize; */
+`;
+
+const ShadowDiv = styled.div`
+	/* width: 100%;
+	height: 100%;
+	-moz-box-shadow: inset 0 0 10px #000000;
+	-webkit-box-shadow: inset 0 0 10px #000000;
+	box-shadow: inset 0 0 10px #000000;
+	position: absolute;
+	overflow-x: none;
+	top: 0;
+	left: 0; */
+
+	position: relative;
+
+	&::after {
+		content: '';
+		display: block;
+		box-shadow: inset 0 0 10px 30px #eee;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+	}
 `;
 
 const ProtoImg = styled.img`
@@ -381,14 +412,14 @@ const Tippt = () => {
 				<Section>
 					<Grid>
 						<Col12>
-							<H2>
+							<H1>
 								A platform that provides users with the information they need to
 								make sustainable choices
-							</H2>
+							</H1>
 						</Col12>
 						<Col6>
 							<StickyDiv style={{ paddingTop: '3rem' }}>
-								<H3>Leave Reviews Based on a Restaurant's Sustainability</H3>
+								<H4>Leave Reviews Based on a Restaurant's Sustainability</H4>
 								<P>
 									The backbone of Tippt is its score system developed by our
 									sustainabilty expert, Delaney. It is based on the restaurant’s
@@ -404,6 +435,7 @@ const Tippt = () => {
 						</Col6>
 						<Col6>
 							<HorizontalDiv>
+								{/* <ShadowDiv></ShadowDiv> */}
 								<ProtoImg src={TP1}></ProtoImg>
 								<ProtoImg src={TP2}></ProtoImg>
 								<ProtoImg src={TP3}></ProtoImg>
@@ -416,7 +448,7 @@ const Tippt = () => {
 						<Grid>
 							<Col6>
 								<StickyDiv style={{ paddingTop: '3rem' }}>
-									<H3>Sustainability Features</H3>
+									<H4>Sustainability Features</H4>
 									<P>
 										We decided to minimize the contact information and show only
 										the restaurant’s address, with a button that allows them to
@@ -435,10 +467,12 @@ const Tippt = () => {
 								</StickyDiv>
 							</Col6>
 							<Col6>
-								<HorizontalDiv>
-									<ProtoImg src={TP6}></ProtoImg>
-									<ProtoImg src={TP7}></ProtoImg>
-								</HorizontalDiv>
+								<ShadowDiv>
+									<HorizontalDiv>
+										<ProtoImg src={TP6}></ProtoImg>
+										<ProtoImg src={TP7}></ProtoImg>
+									</HorizontalDiv>
+								</ShadowDiv>
 							</Col6>
 						</Grid>
 					</MediumSection>

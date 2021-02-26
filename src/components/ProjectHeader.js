@@ -7,6 +7,7 @@ import {
 	H2,
 	H3,
 	H4,
+	H5,
 	P,
 	Caption,
 } from '../components/shared/global';
@@ -32,11 +33,8 @@ const Description = styled(P)`
 	white-space: pre-line;
 `;
 
-const DescTitle = styled(H4)`
-	margin-top: 1rem;
-	margin-bottom: 1rem;
+const DescTitle = styled(H5)`
 	padding-bottom: 1rem;
-	font-family: halyard-display, sans-serif;
 	border-bottom: 2px #202020 solid;
 `;
 
