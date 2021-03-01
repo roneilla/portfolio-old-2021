@@ -15,6 +15,8 @@ import {
 	MediumSection,
 	SmallSection,
 	StyledImg,
+	StyledH4,
+	HorizontalDiv,
 } from '../components/shared/global';
 import { Grid, Col6, Col12, Col8, Col10 } from '../components/shared/grid';
 import Label from '../components/shared/Label';
@@ -76,7 +78,7 @@ const StyledH2 = styled(H2)`
 `;
 
 const BrandImg = styled.img`
-	margin: 2rem 0;
+	margin: 2rem 1rem;
 `;
 
 const ColourDiv = styled.div`
@@ -84,52 +86,6 @@ const ColourDiv = styled.div`
 	height: 5rem;
 	border-radius: 5px;
 	margin: 2rem 0;
-`;
-
-const StyledH4 = styled(H4)`
-	border-bottom: 2px #202020 solid;
-	padding-bottom: 1rem;
-`;
-
-const HorizontalDiv = styled.div`
-	overflow-x: scroll;
-	overflow-y: hidden;
-	white-space: nowrap;
-	position: relative;
-	padding-top: 2rem;
-	padding-bottom: 2rem;
-
-	&::-webkit-scrollbar {
-		display: none;
-	}
-
-	/* cursor: e-resize; */
-`;
-
-const ShadowDiv = styled.div`
-	/* width: 100%;
-	height: 100%;
-	-moz-box-shadow: inset 0 0 10px #000000;
-	-webkit-box-shadow: inset 0 0 10px #000000;
-	box-shadow: inset 0 0 10px #000000;
-	position: absolute;
-	overflow-x: none;
-	top: 0;
-	left: 0; */
-
-	position: relative;
-
-	&::after {
-		content: '';
-		display: block;
-		box-shadow: inset 0 0 10px 30px #eee;
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		pointer-events: none;
-	}
 `;
 
 const ProtoImg = styled.img`
@@ -142,14 +98,10 @@ const Tippt = () => {
 		<div>
 			<Container>
 				<ProjectCard
-					bgColor="#D1F0CE"
-					tintColor="#C1E7BD"
 					title="Tippt"
 					description="Helping users make greener choices through a sustainability platform"
 					category="UX Design"
-					color="black"
-					img={Thumbnail}
-					link="/tippt"></ProjectCard>
+					img={Thumbnail}></ProjectCard>
 				<ProjectHeader
 					label="Overview"
 					description={`Tippt is a platform that scores restaurants based on their sustainability level. It aims to help customers make greener choices when purchasing take outs from restaurants and other food places (bar, cafe, etc). My official role is UX/UI Designer, but I also help out with branding, social media, and front end development.\n\nNellie Spektor, the founder, had the initial idea of creating a platform where users can search for food places that offer take out by their sustainability score. Throughout the summer, we aimed to consult with our target audience to ground the platform and experience in user research.`}
@@ -234,26 +186,26 @@ const Tippt = () => {
 									case study!)
 									<br></br>
 									<br></br>
-									<ol>
-										<li>View contact info of restaurants</li>
-										<li>Assess the restaurant’s packaging</li>
-										<li>Sustainability tips before going to a restaurant</li>
-										<li>Reminder to leave a review</li>
-										<li>Offer incentives to leave reviews</li>
-										<li>
-											Show information about what they can do for each
-											restaurant (i.e this restaurant accepts reusables!)
-										</li>
-										<li>Add photos to a review</li>
-										<li>See tippt-provided information</li>
-										<li>
-											Leave a review based on their packaging and accomodations
-											(reusables, allergies, substitutions, etc.)
-										</li>
-										<li>Create account</li>
-										<li>Search restaurants</li>
-									</ol>
 								</P>
+								<ol>
+									<li>View contact info of restaurants</li>
+									<li>Assess the restaurant’s packaging</li>
+									<li>Sustainability tips before going to a restaurant</li>
+									<li>Reminder to leave a review</li>
+									<li>Offer incentives to leave reviews</li>
+									<li>
+										Show information about what they can do for each restaurant
+										(i.e this restaurant accepts reusables!)
+									</li>
+									<li>Add photos to a review</li>
+									<li>See tippt-provided information</li>
+									<li>
+										Leave a review based on their packaging and accomodations
+										(reusables, allergies, substitutions, etc.)
+									</li>
+									<li>Create account</li>
+									<li>Search restaurants</li>
+								</ol>
 							</span>
 						</Col6>
 						<Col6>
@@ -467,12 +419,10 @@ const Tippt = () => {
 								</StickyDiv>
 							</Col6>
 							<Col6>
-								<ShadowDiv>
-									<HorizontalDiv>
-										<ProtoImg src={TP6}></ProtoImg>
-										<ProtoImg src={TP7}></ProtoImg>
-									</HorizontalDiv>
-								</ShadowDiv>
+								<HorizontalDiv>
+									<ProtoImg src={TP6}></ProtoImg>
+									<ProtoImg src={TP7}></ProtoImg>
+								</HorizontalDiv>
 							</Col6>
 						</Grid>
 					</MediumSection>

@@ -6,6 +6,9 @@ const LabelText = styled.p`
 	font-family: halyard-display, sans-serif;
 	text-transform: uppercase;
 	font-size: 1.25rem;
+	@media (max-width: 800px) {
+		font-size: 1rem;
+	}
 `;
 
 const Label = ({ text }) => {

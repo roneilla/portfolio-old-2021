@@ -21,3 +21,11 @@ body {
 #doodlevr {
 	background-image: url('./images/doodle-thumbnail.jpg');
 }
+
+ol {
+	font-family: halyard-display, sans-serif;
+}
+
+ol li {
+	list-style-position: inside;
+}

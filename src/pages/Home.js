@@ -21,8 +21,14 @@ const Header = styled(Grid)`
 	color: #202020;
 	height: calc(100vh - 200px);
 	margin-top: 50px;
-	padding: 2rem;
+	/* padding: 2rem; */
 	@media (max-width: 400px) {
+		height: auto;
+		margin-top: 8rem;
+		margin-bottom: 6rem;
+	}
+
+	@media (min-width: 401px) and (max-width: 800px) {
 		height: auto;
 		margin-top: 8rem;
 		margin-bottom: 6rem;
@@ -43,8 +49,9 @@ const Title = styled(Col6)`
 	}
 
 	@media (min-width: 401px) and (max-width: 1200px) {
-		font-size: 8rem;
-		line-height: 8.5rem;
+		font-size: 6rem;
+		line-height: 6rem;
+		margin-bottom: 2rem;
 	}
 `;
 
@@ -62,7 +69,7 @@ const Subtitle = styled(Col6)`
 		font-size: 1.5rem;
 	}
 	@media (min-width: 401px) and (max-width: 1200px) {
-		font-size: 2.5rem;
+		font-size: 2rem;
 	}
 	@media (max-width: 768px) {
 		text-align: left;
@@ -97,7 +104,7 @@ const Home = () => {
 		<div>
 			<Container>
 				<Header>
-					<Title>Roneilla Bumanlag</Title>
+					<Title>Hi, I'm Roneilla!</Title>
 					<Subtitle>
 						Interaction Designer based in Toronto. open to full-time and
 						freelance opportunities

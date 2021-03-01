@@ -36,21 +36,21 @@ const StyledCol12 = styled(Col12)`
 
 const StyledH4 = styled(H4)`
 	font-weight: 400;
-	font-size: 4rem;
+	font-size: 3rem;
 	padding-top: 1.5rem;
 	padding-bottom: 1.5rem;
 	text-transform: none;
-	font-family: moret, serif;
-	line-height: 4.75rem;
+	/* font-family: moret, serif; */
+	line-height: 4rem;
 
 	@media (max-width: 400px) {
-		font-size: 2.25rem;
+		font-size: 2rem;
 		line-height: 3rem;
 	}
 
 	@media (min-width: 401px) and (max-width: 800px) {
-		font-size: 3rem;
-		line-height: 4rem;
+		font-size: 2.5rem;
+		line-height: 3rem;
 	}
 `;
 
@@ -90,7 +90,7 @@ const Footer = () => {
 							href="mailto:roneillabumanlag@gmail.com"
 							style={{
 								textTransform: 'uppercase',
-								fontSize: '1.25rem',
+								fontSize: '1.1rem',
 								padding: '1rem 0',
 							}}>
 							roneillabumanlag@gmail.com

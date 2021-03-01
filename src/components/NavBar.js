@@ -16,7 +16,7 @@ const Nav = styled.nav`
 const NavMenu = styled.ul`
 	list-style-type: none;
 	display: inline-flex;
-	grid-column: 7 / 11;
+	grid-column: 5 / 10;
 	justify-content: space-between;
 
 	@media (max-width: 600px) {
@@ -24,7 +24,7 @@ const NavMenu = styled.ul`
 	}
 
 	@media (max-width: 1100px) {
-		grid-column: 5/11;
+		grid-column: 5/10;
 	}
 `;
 
@@ -85,7 +85,7 @@ const NavBar = () => {
 
 			<Grid>
 				<NavMenu>
-					<NavItem>
+					{/* <NavItem>
 						<StyledLink primary="true" to="/casestudies">
 							Case Studies
 						</StyledLink>
@@ -99,7 +99,7 @@ const NavBar = () => {
 						<StyledLink primary="true" to="/about">
 							About
 						</StyledLink>
-					</NavItem>
+					</NavItem> */}
 				</NavMenu>
 
 				<A
