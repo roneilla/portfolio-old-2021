@@ -76,19 +76,17 @@ const OtherProjects = () => {
 		));
 
 	return (
-		<Container>
-			<StyledSection>
-				<Grid>
-					<Col6>
-						<StickyDiv>
-							<StyledStar src={Star}></StyledStar>
-							<H2>View Other Projects</H2>
-						</StickyDiv>
-					</Col6>
-					<Col6>{projectDataCards}</Col6>
-				</Grid>
-			</StyledSection>
-		</Container>
+		<StyledSection>
+			<Grid>
+				<Col6>
+					<StickyDiv>
+						<StyledStar src={Star}></StyledStar>
+						<H2>View Other Projects</H2>
+					</StickyDiv>
+				</Col6>
+				<Col6>{projectDataCards}</Col6>
+			</Grid>
+		</StyledSection>
 	);
 };
 

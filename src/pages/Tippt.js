@@ -79,6 +79,9 @@ const StyledH2 = styled(H2)`
 
 const BrandImg = styled.img`
 	margin: 2rem 1rem;
+	@media (max-width: 600px) {
+		width: 100%;
+	}
 `;
 
 const ColourDiv = styled.div`
@@ -91,6 +94,11 @@ const ColourDiv = styled.div`
 const ProtoImg = styled.img`
 	max-height: 800px;
 	margin: 0 1rem;
+
+	@media (max-width: 600px) {
+		height: 400px;
+		width: auto;
+	}
 `;
 
 const Tippt = () => {
