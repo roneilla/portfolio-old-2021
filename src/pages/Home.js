@@ -36,9 +36,9 @@ const Header = styled(Grid)`
 `;
 
 const Title = styled(Col6)`
-	font-size: 10rem;
+	font-size: 12rem;
 	width: 100%;
-	line-height: 9rem;
+	line-height: 12rem;
 	font-family: moret, serif;
 	color: #202020;
 	transition: 0.2s ease;
@@ -46,12 +46,6 @@ const Title = styled(Col6)`
 		font-size: 4rem;
 		line-height: 4rem;
 		margin-bottom: 1rem;
-	}
-
-	@media (min-width: 401px) and (max-width: 1200px) {
-		font-size: 6rem;
-		line-height: 6rem;
-		margin-bottom: 2rem;
 	}
 `;
 
@@ -67,9 +61,6 @@ const Subtitle = styled(Col6)`
 
 	@media (max-width: 400px) {
 		font-size: 1.5rem;
-	}
-	@media (min-width: 401px) and (max-width: 1200px) {
-		font-size: 2rem;
 	}
 	@media (max-width: 768px) {
 		text-align: left;
@@ -105,10 +96,7 @@ const Home = () => {
 			<Container>
 				<Header>
 					<Title>Hi, I'm Roneilla!</Title>
-					<Subtitle>
-						Interaction Designer based in Toronto. open to full-time and
-						freelance opportunities
-					</Subtitle>
+					<Subtitle>Interaction Designer based in Toronto.</Subtitle>
 				</Header>
 			</Container>
 			<SelectedProjects>

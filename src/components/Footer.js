@@ -69,8 +69,8 @@ const Footer = () => {
 				<Col8>
 					<StyledH4>
 						I create, design, and build digital solutions for modern problems.
-						Currently looking for full-time opportunities beginning May 2021.{' '}
-						<A href="mailto:roneillabumanlag@gmail.com"> Let’s talk!</A>
+						Want to work together?{' '}
+						<A href="mailto:roneillabumanlag@gmail.com">Let’s talk!</A>
 					</StyledH4>
 				</Col8>
 				<StyledCol12>
