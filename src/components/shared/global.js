@@ -179,3 +179,15 @@ export const HorizontalDiv = styled.div`
 
 	/* cursor: e-resize; */
 `;
+
+export const Button = styled.button`
+	appearance: none;
+	border: 0;
+	background-color: #eee;
+	color: #111;
+	padding: 0.5rem 1rem;
+	font-size: 1.25rem;
+	font-family: halyard-display;
+	text-transform: uppercase;
+	font-weight: 500;
+`;

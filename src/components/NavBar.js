@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import Button from './shared/Button';
-import { ReactComponent as Logo } from '../images/roneillabumanlag-logo.svg';
+import { ReactComponent as Logo } from '../images/roneilla-logo.svg';
 import { ReactComponent as SayHello } from '../images/say-hello.svg';
 import { Grid, Col1 } from '../components/shared/grid';
 import { A } from '../components/shared/global';
