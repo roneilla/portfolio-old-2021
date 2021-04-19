@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import {
 	Container,
@@ -9,6 +9,7 @@ import {
 	H4,
 	P,
 	Caption,
+	Button,
 } from '../components/shared/global';
 import { Grid, Col6, Col12 } from '../components/shared/grid';
 import Label from '../components/shared/Label';
@@ -16,22 +17,18 @@ import ProjectCard from '../components/ProjectCard';
 import Tippt from '../images/tippt-thumbnail.png';
 import Doodle from '../images/doodle-thumbnail.jpg';
 import { Link } from 'react-router-dom';
+import InteractiveHeader from './../components/InteractiveHeader';
 
 const Header = styled(Grid)`
 	color: #202020;
-	height: calc(100vh - 200px);
-	margin-top: 50px;
+	height: calc(80vh - 200px);
+	margin-top: 2rem;
+	margin-bottom: 2rem;
 	/* padding: 2rem; */
 	@media (max-width: 400px) {
-		height: auto;
-		margin-top: 8rem;
-		margin-bottom: 6rem;
+		height: calc(80vh - 200px);
 	}
-
 	@media (min-width: 401px) and (max-width: 800px) {
-		height: auto;
-		margin-top: 8rem;
-		margin-bottom: 6rem;
 	}
 `;
 
@@ -90,14 +87,29 @@ const StyledLink = styled(Link)`
 	color: #202020;
 `;
 
+const HeaderInt = styled.div`
+	grid-column: span 12;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+`;
+
 const Home = () => {
+	const [showInteractive, setShowInteractive] = useState(true);
+
 	return (
 		<div>
 			<Container>
-				<Header>
-					<Title>Hi, I'm Roneilla!</Title>
-					<Subtitle>Interaction Designer based in Toronto.</Subtitle>
-				</Header>
+				{showInteractive === true ? (
+					<Header id="header">
+						<InteractiveHeader></InteractiveHeader>
+					</Header>
+				) : (
+					<Header>
+						<Title>Hi, I'm Roneilla!</Title>
+						<Subtitle>Interaction Designer based in Toronto.</Subtitle>
+					</Header>
+				)}
 			</Container>
 			<SelectedProjects>
 				<Container>
