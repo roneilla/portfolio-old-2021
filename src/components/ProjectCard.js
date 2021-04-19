@@ -11,8 +11,14 @@ const Div = styled.div`
 const StyledImg = styled.img`
 	width: 100%;
 	max-height: 600px;
-	object-fit: contain;
+	object-fit: cover;
 	margin: 2rem 0;
+	transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+	&:hover {
+		transform-style: preserve-3d;
+		transform: rotateY(-0.5deg) scale(0.95);
+	}
 `;
 
 const Title = styled.h1`
@@ -66,7 +72,7 @@ const ProjectCard = ({ img, title, description, category, link }) => {
 						<Category>{category}</Category>
 					</TextContainer>
 				</Col4>
-				<Col8>
+				<Col8 style={{ perspective: '100px' }}>
 					<StyledImg src={img}></StyledImg>
 				</Col8>
 			</Grid>

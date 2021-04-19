@@ -22,18 +22,13 @@ import InteractiveHeader from './../components/InteractiveHeader';
 const Header = styled(Grid)`
 	color: #202020;
 	height: calc(80vh - 200px);
-	margin-top: 50px;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
 	/* padding: 2rem; */
 	@media (max-width: 400px) {
-		height: auto;
-		margin-top: 8rem;
-		margin-bottom: 6rem;
+		height: calc(80vh - 200px);
 	}
-
 	@media (min-width: 401px) and (max-width: 800px) {
-		height: auto;
-		margin-top: 8rem;
-		margin-bottom: 6rem;
 	}
 `;
 
@@ -107,27 +102,10 @@ const Home = () => {
 			<Container>
 				{showInteractive === true ? (
 					<Header id="header">
-						<HeaderInt>
-							<P>This is an interactive header. You can move stuff around!</P>
-							<Button onClick={(e) => setShowInteractive(!showInteractive)}>
-								Click to show
-								{showInteractive === true
-									? ' Static Header'
-									: ' Interactive Header'}
-							</Button>
-						</HeaderInt>
 						<InteractiveHeader></InteractiveHeader>
 					</Header>
 				) : (
 					<Header>
-						<HeaderInt>
-							<Button onClick={(e) => setShowInteractive(!showInteractive)}>
-								Click to show
-								{showInteractive === true
-									? ' Static Header'
-									: ' Interactive Header'}
-							</Button>
-						</HeaderInt>
 						<Title>Hi, I'm Roneilla!</Title>
 						<Subtitle>Interaction Designer based in Toronto.</Subtitle>
 					</Header>
