@@ -26,7 +26,7 @@ import OtherProjects from '../components/OtherProjects';
 
 import ProjectCard from '../components/ProjectCard';
 
-import Thumbnail from './../images/doodle-thumbnail.jpg';
+import Thumbnail from './../images/thumbnails/doodlevr.jpg';
 
 import DoodleThen from './../images/doodle-2.jpg';
 import Fireworks from './../images/fireworks.gif';

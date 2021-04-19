@@ -30,7 +30,7 @@ import ManropeSVG from '../images/Manrope.svg';
 import CorbenSVG from '../images/Corben.svg';
 import TipptLogo from '../images/tippt-logo.svg';
 
-import Thumbnail from '../images/tippt-thumbnail.png';
+import Thumbnail from '../images/thumbnails/tippt.png';
 import AffinityMap from '../images/tippt/affinitymap-1.jpg';
 
 import CollegePersona from '../images/tippt/CollegeStudent.png';
@@ -119,12 +119,11 @@ const Tippt = () => {
 					collaborators="Nellie Spektor, Mina Malloy"></ProjectHeader>
 				<Section>
 					<Grid>
-						<Col6>
+						<Col12>
 							<H1>
 								Aligning the Visual Identity with Tippt’s Mission &amp; Values
 							</H1>
-						</Col6>
-						<Col6></Col6>
+						</Col12>
 						<Col6>
 							<StickyDiv>
 								<span style={{ margin: '2rem' }}>
@@ -171,10 +170,9 @@ const Tippt = () => {
 				</Section>
 				<Section>
 					<Grid>
-						<Col6>
+						<Col12>
 							<H1>Grounding the Experience in User Research</H1>
-						</Col6>
-						<Col6></Col6>
+						</Col12>
 						<Col6>
 							<span style={{ margin: '2rem' }}>
 								<Label text="User Consultation"></Label>
@@ -264,17 +262,15 @@ const Tippt = () => {
 										our timeline in mind. Some features were also refined in
 										order to be simpler for both the user and development side
 										(MVP mindset!)
-										<ol>
-											<li>Create account/log in</li>
-											<li>
-												Leave a review focused on the packaging (a Tippt!)
-											</li>
-											<li>
-												Search for restaurants by location then get directions
-											</li>
-											<li>Add a restaurant</li>
-										</ol>
 									</P>
+									<ol>
+										<li>Create account/log in</li>
+										<li>Leave a review focused on the packaging (a Tippt!)</li>
+										<li>
+											Search for restaurants by location then get directions
+										</li>
+										<li>Add a restaurant</li>
+									</ol>
 								</StickyDiv>
 							</Col6>
 							<Col6>
@@ -329,10 +325,9 @@ const Tippt = () => {
 				</Section>
 				<Section>
 					<Grid>
-						<Col6>
+						<Col12>
 							<H1>Extending the Brand Identity into a Digital Platform</H1>
-						</Col6>
-						<Col6></Col6>
+						</Col12>
 						<Col6>
 							<StickyDiv style={{ paddingTop: '3rem' }}>
 								<Label text="High Fidelity Wireframes"></Label>

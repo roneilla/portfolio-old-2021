@@ -14,10 +14,9 @@ import {
 import { Grid, Col6, Col12 } from '../components/shared/grid';
 import Label from '../components/shared/Label';
 import ProjectCard from '../components/ProjectCard';
-import Tippt from '../images/tippt-thumbnail.png';
-import Doodle from '../images/doodle-thumbnail.jpg';
 import { Link } from 'react-router-dom';
 import InteractiveHeader from './../components/InteractiveHeader';
+import projectData from './../projectData';
 
 const Header = styled(Grid)`
 	color: #202020;
@@ -26,7 +25,7 @@ const Header = styled(Grid)`
 	margin-bottom: 2rem;
 	/* padding: 2rem; */
 	@media (max-width: 400px) {
-		height: calc(80vh - 200px);
+		height: calc(65vh - 200px);
 	}
 	@media (min-width: 401px) and (max-width: 800px) {
 	}
@@ -117,24 +116,17 @@ const Home = () => {
 						<ProjectsTitle>
 							<StyledH3>Featured Work</StyledH3>
 						</ProjectsTitle>
-						<Col12>
-							<StyledLink to="/tippt">
-								<ProjectCard
-									title="Tippt"
-									description="Helping users make greener choices through a sustainability platform"
-									category="UX Design"
-									img={Tippt}></ProjectCard>
-							</StyledLink>
-						</Col12>
-						<Col12>
-							<StyledLink to="/doodlevr">
-								<ProjectCard
-									title="Google Doodle VR"
-									description="Rethinking Google Doodles to create an immersive experience celebrating 50 years of VR"
-									category="AR/VR"
-									img={Doodle}></ProjectCard>
-							</StyledLink>
-						</Col12>
+						{projectData.map((project) => (
+							<Col12 key={project.projectName}>
+								<StyledLink to={project.link}>
+									<ProjectCard
+										title={project.title}
+										description={project.description}
+										category={project.category}
+										img={project.img}></ProjectCard>
+								</StyledLink>
+							</Col12>
+						))}
 					</Grid>
 				</Container>
 			</SelectedProjects>

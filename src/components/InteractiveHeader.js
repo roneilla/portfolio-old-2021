@@ -7,7 +7,7 @@ import Text2 from './../images/header/text2.png';
 import Text3 from './../images/header/text3.png';
 import Text4 from './../images/header/text4.png';
 import Amp from './../images/header/amp.png';
-import Logo from './../images/header/logo2.png';
+import Logo from './../images/header/logo.png';
 import Star from './../images/header/star.png';
 
 const InteractiveHeader = (props) => {
@@ -42,7 +42,7 @@ const InteractiveHeader = (props) => {
 			},
 		});
 
-		const floor = Bodies.rectangle(cw / 2, ch - 25, cw, 50, {
+		const floor = Bodies.rectangle(cw / 2, ch, cw, 50, {
 			isStatic: true,
 			render: {
 				fillStyle: bgColor,
@@ -72,27 +72,32 @@ const InteractiveHeader = (props) => {
 		let logoScale = 1;
 
 		if (ch > 400) {
-			if (cw < 800) {
-				logoScale = 0.75;
-				randomOffset = 50;
-			} else if (cw >= 800) {
-				scale = 0.75;
-				logoScale = 1;
-				randomOffset = 100;
-			} else {
+			if (cw < 400) {
 				scale = 0.35;
 				logoScale = 0.5;
 				randomOffset = 0;
+			} else if (cw < 800) {
+				logoScale = 0.75;
+				randomOffset = 50;
+			} else if (cw < 1200) {
+				scale = 0.75;
+				logoScale = 1;
+				randomOffset = 150;
+			} else if (cw > 1200) {
+				scale = 0.9;
+				logoScale = 1;
+				randomOffset = 200;
+				console.log('big');
 			}
 		} else {
 			scale = 0.4;
 			logoScale = 0.5;
-			randomOffset = 50;
+			randomOffset = 25;
 		}
 
 		let cFriction = 1;
 		let cRest = 0.7;
-		let cFrictionAir = 0.05;
+		let cFrictionAir = 0.02;
 
 		const logo = Bodies.rectangle(
 			randomX - randomOffset / 2,
@@ -153,7 +158,7 @@ const InteractiveHeader = (props) => {
 			randomX - randomOffset * 0.5,
 			y,
 			92 * scale,
-			168 * scale,
+			102 * scale,
 			{
 				friction: cFriction,
 				restitution: cRest,

@@ -23,8 +23,8 @@ import { Link, useLocation } from 'react-router-dom';
 
 import projectData from './../projectData';
 
-import doodlevr from './../images/doodle-thumbnail.jpg';
-import tippt from './../images/tippt-thumbnail.png';
+import doodlevr from './../images/thumbnails/doodlevr.jpg';
+import tippt from './../images/thumbnails/tippt.png';
 
 const StyledSection = styled(Section)`
 	border: 0;
@@ -62,8 +62,8 @@ const OtherProjects = () => {
 	const projectDataCards = projectData
 		.filter(({ link }) => link !== pathname)
 		.map((project) => (
-			<StyledLink to={project.link}>
-				<CardDiv key={project.title}>
+			<StyledLink to={project.link} key={project.title}>
+				<CardDiv>
 					<H3>{project.title}</H3>
 					<P>{project.description}</P>
 					{project.projectName === 'tippt' ? (

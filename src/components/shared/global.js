@@ -69,7 +69,6 @@ export const H4 = styled.h4`
 	margin-top: 1rem;
 	margin-bottom: 2rem;
 	font-family: halyard-display, sans-serif;
-	text-transform: uppercase;
 	@media (max-width: 800px) {
 		font-size: 1.5rem;
 	}
@@ -172,9 +171,14 @@ export const HorizontalDiv = styled.div`
 	white-space: nowrap;
 	position: relative;
 	padding: 1rem 0;
+	scroll-snap-type: x mandatory;
 
 	&::-webkit-scrollbar {
 		display: none;
+	}
+
+	& img {
+		scroll-snap-align: center;
 	}
 
 	/* cursor: e-resize; */

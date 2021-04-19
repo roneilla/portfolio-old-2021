@@ -32,7 +32,7 @@ const StyledProjectHeader = styled.div`
 	border-bottom: 2px #202020 solid;
 `;
 
-const Description = styled(P)`
+const Description = styled.div`
 	grid-column: span 6;
 	grid-row: span 2;
 	white-space: pre-line;
@@ -80,36 +80,29 @@ const Collaborators = styled.div`
 	}
 `;
 
-const ProjectHeader = ({
-	label,
-	description,
-	date,
-	roles,
-	tools,
-	collaborators,
-}) => {
+const ProjectHeader = (props) => {
 	return (
 		<StyledProjectHeader>
 			<StyledGrid>
 				<Description>
-					<Label text={label}></Label>
-					{description}
+					<Label text={props.label}></Label>
+					<P>{props.description}</P>
 				</Description>
 				<Date>
 					<DescTitle>Date</DescTitle>
-					<P>{date}</P>
+					<P>{props.date}</P>
 				</Date>
 				<Roles>
 					<DescTitle>Roles</DescTitle>
-					<P>{roles}</P>
+					<P>{props.roles}</P>
 				</Roles>
 				<Tools>
 					<DescTitle>Tools</DescTitle>
-					<P>{tools}</P>
+					<P>{props.tools}</P>
 				</Tools>
 				<Collaborators>
 					<DescTitle>Collaborators</DescTitle>
-					<P>{collaborators}</P>
+					<P>{props.collaborators}</P>
 				</Collaborators>
 			</StyledGrid>
 		</StyledProjectHeader>

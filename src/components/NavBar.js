@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import Button from './shared/Button';
-import { ReactComponent as Logo } from '../images/roneilla-icon.svg';
+import { ReactComponent as Logo } from '../images/roneilla-logo.svg';
 import { ReactComponent as SayHello } from '../images/say-hello.svg';
 import { Grid, Col1 } from '../components/shared/grid';
 import { A } from '../components/shared/global';
@@ -16,20 +16,18 @@ const Nav = styled.nav`
 const NavMenu = styled.ul`
 	list-style-type: none;
 	display: inline-flex;
-	grid-column: 5 / 10;
 	justify-content: space-between;
-
+	float: right;
+	margin-right: 5rem;
+	width: 50%;
 	@media (max-width: 600px) {
 		display: none;
-	}
-
-	@media (max-width: 1100px) {
-		grid-column: 5/10;
 	}
 `;
 
 const NavItem = styled.li`
 	list-style-type: none;
+	margin: 0 1rem;
 `;
 
 const StyledLink = styled(Link)`
@@ -83,35 +81,33 @@ const NavBar = () => {
 				</Link>
 			</LogoContainer>
 
-			<Grid>
-				<NavMenu>
-					{/* <NavItem>
-						<StyledLink primary="true" to="/casestudies">
-							Case Studies
-						</StyledLink>
-					</NavItem>
-					<NavItem>
-						<StyledLink primary="true" to="/projects">
-							Work
-						</StyledLink>
-					</NavItem>
-					<NavItem>
-						<StyledLink primary="true" to="/about">
-							About
-						</StyledLink>
-					</NavItem> */}
-				</NavMenu>
+			<NavMenu>
+				<NavItem>
+					<StyledLink primary="true" to="/work">
+						Work
+					</StyledLink>
+				</NavItem>
+				<NavItem>
+					<StyledLink primary="true" to="/services">
+						Services
+					</StyledLink>
+				</NavItem>
+				<NavItem>
+					<StyledLink primary="true" to="/about">
+						About
+					</StyledLink>
+				</NavItem>
+			</NavMenu>
 
-				<A
-					href="mailto:roneillabumanlag@gmail.com"
-					style={{
-						textTransform: 'uppercase',
-						fontSize: '1.25rem',
-						padding: '1rem 0',
-					}}>
-					<StyledContact ref={imageRef}></StyledContact>
-				</A>
-			</Grid>
+			<A
+				href="mailto:roneillabumanlag@gmail.com"
+				style={{
+					textTransform: 'uppercase',
+					fontSize: '1.25rem',
+					padding: '1rem 0',
+				}}>
+				<StyledContact ref={imageRef}></StyledContact>
+			</A>
 		</Nav>
 	);
 };
