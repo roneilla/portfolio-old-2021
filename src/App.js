@@ -29,6 +29,16 @@ const Layout = styled.div`
 `;
 
 function App() {
+	// uncomment before build
+
+	// setTimeout(() => {
+	// 	console.clear();
+	// 	console.log(
+	// 		'%cBuilt by Roneilla Bumanlag',
+	// 		'background: url("https://roneilla.com/star.png") no-repeat center left; color: #111; font-family: "Arial", sans-serif; font-size: 1rem; background-size: 18px 18px; padding: 1rem 0 1rem 2rem; text-transform: uppercase; font-weight: 700;'
+	// 	);
+	// }, 2000);
+
 	return (
 		<BrowserRouter onUpdate={() => window.scrollTo(0, 0)}>
 			<ScrollToTop />
