@@ -17,22 +17,22 @@ import {
 	StyledImg,
 	StyledH4,
 	HorizontalDiv,
-} from '../components/shared/global';
-import { Grid, Col6, Col12, Col8, Col10 } from '../components/shared/grid';
-import Label from '../components/shared/Label';
+} from '../../components/shared/global';
+import { Grid, Col6, Col12, Col8, Col10 } from '../../components/shared/grid';
+import Label from '../../components/shared/Label';
 
-import ProjectHeader from '../components/ProjectHeader';
-import OtherProjects from '../components/OtherProjects';
+import ProjectHeader from '../../components/ProjectHeader';
+import OtherProjects from '../../components/OtherProjects';
 
-import ProjectCard from '../components/ProjectCard';
+import ProjectCard from '../../components/ProjectCard';
 
-import Thumbnail from './../images/thumbnails/doodlevr.jpg';
+import Thumbnail from '../../images/thumbnails/doodlevr.jpg';
 
-import DoodleThen from './../images/doodle-2.jpg';
-import Fireworks from './../images/fireworks.gif';
-import Balloon from './../images/balloon.gif';
-import Sensorama from './../images/sensorama.gif';
-import Wireframe from './../images/wireframe.gif';
+import DoodleThen from '../../images/doodle-2.jpg';
+import Fireworks from '../../images/fireworks.gif';
+import Balloon from '../../images/balloon.gif';
+import Sensorama from '../../images/sensorama.gif';
+import Wireframe from '../../images/wireframe.gif';
 
 const DoodleImg = styled(StyledImg)`
 	margin: 0 1rem;

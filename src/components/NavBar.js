@@ -18,7 +18,7 @@ const NavMenu = styled.ul`
 	display: inline-flex;
 	justify-content: space-between;
 	float: right;
-	margin-right: 5rem;
+	margin-right: 8rem;
 	width: 50%;
 	@media (max-width: 600px) {
 		display: none;

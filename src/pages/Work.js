@@ -33,7 +33,7 @@ const Work = () => {
 		));
 
 	return (
-		<div>
+		<div style={{ paddingBottom: '2rem' }}>
 			<Container>
 				<H1>Work</H1>
 				<FilterWrapper>

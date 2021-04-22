@@ -1,6 +1,8 @@
 import React, { useRef, useEffect, useState } from 'react';
 import Matter, { Composite } from 'matter-js';
 import Sketch from 'react-p5';
+import styled, { keyframes } from 'styled-components';
+import { P } from './shared/global';
 
 import Text1 from './../images/header/text1.png';
 import Text2 from './../images/header/text2.png';
@@ -9,6 +11,37 @@ import Text4 from './../images/header/text4.png';
 import Amp from './../images/header/amp.png';
 import Logo from './../images/header/logo.png';
 import Star from './../images/header/star.png';
+
+const fadeIn = keyframes`
+	0% { 
+		opacity: 0;
+		top: -2rem;
+	}
+	
+	100% {
+		opacity: 1;
+		top: 0;
+	}
+
+`;
+
+const StyledP = styled(P)`
+	position: absolute;
+	text-align: center;
+	transition: 1s ease-in-out;
+	text-transform: uppercase;
+	font-weight: 500;
+	font-size: 0.75rem;
+	color: #666;
+	margin: 0;
+	top: 0;
+	left: 0;
+	width: 100%;
+
+	animation-name: ${fadeIn};
+	animation-duration: 2s;
+	animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+`;
 
 const InteractiveHeader = (props) => {
 	const boxRef = useRef(null);
@@ -42,20 +75,20 @@ const InteractiveHeader = (props) => {
 			},
 		});
 
-		const floor = Bodies.rectangle(cw / 2, ch, cw, 50, {
+		const floor = Bodies.rectangle(cw / 2, ch + 25, cw, 50, {
 			isStatic: true,
 			render: {
 				fillStyle: bgColor,
 			},
 		});
 
-		const leftWall = Bodies.rectangle(0, ch / 2, 50, ch, {
+		const leftWall = Bodies.rectangle(-25, ch / 2, 50, ch, {
 			isStatic: true,
 			render: {
 				fillStyle: bgColor,
 			},
 		});
-		const rightWall = Bodies.rectangle(cw, ch / 2, 50, ch, {
+		const rightWall = Bodies.rectangle(cw + 25, ch / 2, 50, ch, {
 			isStatic: true,
 			render: {
 				fillStyle: bgColor,
@@ -71,27 +104,24 @@ const InteractiveHeader = (props) => {
 		let scale = 0.75;
 		let logoScale = 1;
 
-		if (ch > 400) {
-			if (cw < 400) {
-				scale = 0.35;
-				logoScale = 0.5;
-				randomOffset = 0;
-			} else if (cw < 800) {
-				logoScale = 0.75;
-				randomOffset = 50;
-			} else if (cw < 1200) {
-				scale = 0.75;
-				logoScale = 1;
-				randomOffset = 150;
-			} else if (cw > 1200) {
-				scale = 0.9;
-				logoScale = 1;
-				randomOffset = 200;
-				console.log('big');
-			}
-		} else {
-			scale = 0.4;
+		if (cw < 400 && ch > 400) {
+			scale = 0.35;
 			logoScale = 0.5;
+			randomOffset = 0;
+		} else if (cw < 800 && ch > 400) {
+			logoScale = 0.75;
+			randomOffset = 50;
+		} else if (cw > 800 && ch > 400) {
+			scale = 0.75;
+			logoScale = 0.9;
+			randomOffset = 150;
+		} else if (cw < 300 && ch < 300) {
+			scale = 0.3;
+			logoScale = 0.3;
+			randomOffset = 25;
+		} else if (ch < 400) {
+			scale = 0.4;
+			logoScale = 0.45;
 			randomOffset = 25;
 		}
 
@@ -252,12 +282,17 @@ const InteractiveHeader = (props) => {
 
 	return (
 		<div
+			id="header"
 			ref={boxRef}
 			style={{
 				width: '100%',
+				maxHeight: '500px',
 				height: '100%',
 				gridColumn: 'span 12',
+				position: 'relative',
+				alignSelf: 'center',
 			}}>
+			<StyledP>Click and drag to move!</StyledP>
 			<canvas ref={canvasRef} />
 		</div>
 	);

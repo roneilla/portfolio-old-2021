@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import {
 	Container,
@@ -21,7 +21,6 @@ import projectData from './../projectData';
 const Header = styled(Grid)`
 	color: #202020;
 	height: calc(80vh - 200px);
-	margin-top: 2rem;
 	margin-bottom: 2rem;
 	/* padding: 2rem; */
 	@media (max-width: 400px) {
@@ -67,7 +66,7 @@ const Subtitle = styled(Col6)`
 
 const SelectedProjects = styled.div`
 	color: #202020;
-	padding: 2rem 0;
+	padding: 2rem 0 2rem 0;
 `;
 
 const ProjectsTitle = styled(Col12)`
@@ -75,6 +74,7 @@ const ProjectsTitle = styled(Col12)`
 `;
 
 const StyledH3 = styled(H3)`
+	font-size: 2.5rem;
 	@media (max-width: 400px) {
 		font-size: 2rem;
 		line-height: 3rem;
@@ -86,21 +86,13 @@ const StyledLink = styled(Link)`
 	color: #202020;
 `;
 
-const HeaderInt = styled.div`
-	grid-column: span 12;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-`;
-
 const Home = () => {
 	const [showInteractive, setShowInteractive] = useState(true);
-
 	return (
 		<div>
 			<Container>
 				{showInteractive === true ? (
-					<Header id="header">
+					<Header>
 						<InteractiveHeader></InteractiveHeader>
 					</Header>
 				) : (

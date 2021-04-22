@@ -17,49 +17,49 @@ import {
 	StyledImg,
 	StyledH4,
 	HorizontalDiv,
-} from '../components/shared/global';
-import { Grid, Col6, Col12, Col8, Col10 } from '../components/shared/grid';
-import Label from '../components/shared/Label';
+} from '../../components/shared/global';
+import { Grid, Col6, Col12, Col8, Col10 } from '../../components/shared/grid';
+import Label from '../../components/shared/Label';
 
-import ProjectHeader from '../components/ProjectHeader';
-import OtherProjects from '../components/OtherProjects';
+import ProjectHeader from '../../components/ProjectHeader';
+import OtherProjects from '../../components/OtherProjects';
 
-import ProjectCard from '../components/ProjectCard';
+import ProjectCard from '../../components/ProjectCard';
 
-import ManropeSVG from '../images/Manrope.svg';
-import CorbenSVG from '../images/Corben.svg';
-import TipptLogo from '../images/tippt-logo.svg';
+import ManropeSVG from '../../images/Manrope.svg';
+import CorbenSVG from '../../images/Corben.svg';
+import TipptLogo from '../../images/tippt-logo.svg';
 
-import Thumbnail from '../images/thumbnails/tippt.png';
-import AffinityMap from '../images/tippt/affinitymap-1.jpg';
+import Thumbnail from '../../images/thumbnails/tippt.png';
+import AffinityMap from '../../images/tippt/affinitymap-1.jpg';
 
-import CollegePersona from '../images/tippt/CollegeStudent.png';
-import CollegeJourney from '../images/tippt/college-student-journey.jpg';
-import EcoMPersona from '../images/tippt/Eco-Millenial.png';
-import EcoMJourney from '../images/tippt/eco-millenial-journey.jpg';
-import ParentPersona from '../images/tippt/Parent.png';
-import ParentJourney from '../images/tippt/parent-journey.jpg';
+import CollegePersona from '../../images/tippt/CollegeStudent.png';
+import CollegeJourney from '../../images/tippt/college-student-journey.jpg';
+import EcoMPersona from '../../images/tippt/Eco-Millenial.png';
+import EcoMJourney from '../../images/tippt/eco-millenial-journey.jpg';
+import ParentPersona from '../../images/tippt/Parent.png';
+import ParentJourney from '../../images/tippt/parent-journey.jpg';
 
-import UserFlow1 from '../images/tippt/userflow-1.jpg';
-import UserFlow2 from '../images/tippt/userflow-2.jpg';
-import UserFlow3 from '../images/tippt/userflow-3.jpg';
-import UserFlow4 from '../images/tippt/userflow-4.jpg';
+import UserFlow1 from '../../images/tippt/userflow-1.jpg';
+import UserFlow2 from '../../images/tippt/userflow-2.jpg';
+import UserFlow3 from '../../images/tippt/userflow-3.jpg';
+import UserFlow4 from '../../images/tippt/userflow-4.jpg';
 
-import Sitemap from '../images/tippt/sitemap.jpg';
-import Wireframe from '../images/tippt/wireframe.png';
+import Sitemap from '../../images/tippt/sitemap.jpg';
+import Wireframe from '../../images/tippt/wireframe.png';
 
-import DS1 from '../images/tippt/dessys1.png';
-import DS2 from '../images/tippt/dessys2.png';
-import HighFi from '../images/tippt/highfi.png';
-import Spacers from '../images/tippt/spacers.png';
+import DS1 from '../../images/tippt/dessys1.png';
+import DS2 from '../../images/tippt/dessys2.png';
+import HighFi from '../../images/tippt/highfi.png';
+import Spacers from '../../images/tippt/spacers.png';
 
-import TP1 from '../images/tippt/TP-1.png';
-import TP2 from '../images/tippt/TP-2.png';
-import TP3 from '../images/tippt/TP-3.png';
-import TP4 from '../images/tippt/TP-4.png';
-import TP5 from '../images/tippt/TP-5.png';
-import TP6 from '../images/tippt/TP-6.png';
-import TP7 from '../images/tippt/TP-7.png';
+import TP1 from '../../images/tippt/TP-1.png';
+import TP2 from '../../images/tippt/TP-2.png';
+import TP3 from '../../images/tippt/TP-3.png';
+import TP4 from '../../images/tippt/TP-4.png';
+import TP5 from '../../images/tippt/TP-5.png';
+import TP6 from '../../images/tippt/TP-6.png';
+import TP7 from '../../images/tippt/TP-7.png';
 
 const HeaderImgWrapper = styled.div`
 	display: flex;

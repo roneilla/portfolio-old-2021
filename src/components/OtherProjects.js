@@ -1,19 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import {
-	Container,
-	CenteredWrapper,
-	H1,
 	H2,
 	H3,
-	H4,
 	P,
-	Caption,
-	GreyBG,
 	StickyDiv,
 	Section,
-	MediumSection,
-	SmallSection,
 	StyledImg,
 } from '../components/shared/global';
 import { Grid, Col6, Col12 } from '../components/shared/grid';
