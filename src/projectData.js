@@ -1,10 +1,14 @@
 import tippt from './images/thumbnails/tippt.png';
 import doodlevr from './images/thumbnails/doodlevr.jpg';
 import thepriceoflife from './images/thumbnails/thepriceoflife.png';
+import tipptHover from './images/thumbnails/tippt-hover.png';
+import doodlevrHover from './images/thumbnails/doodlevr-hover.png';
+import thepriceoflifeHover from './images/thumbnails/thepriceoflife-hover.png';
 
 export default [
 	{
 		img: thepriceoflife,
+		imgHover: thepriceoflifeHover,
 		projectName: 'thepriceoflife',
 		title: 'The Price of Life',
 		link: '/thepriceoflife',
@@ -15,6 +19,7 @@ export default [
 	},
 	{
 		img: tippt,
+		imgHover: tipptHover,
 		projectName: 'tippt',
 		title: 'Tippt',
 		link: '/tippt',
@@ -25,6 +30,7 @@ export default [
 	},
 	{
 		img: doodlevr,
+		imgHover: doodlevrHover,
 		projectName: 'doodlevr',
 		title: 'Google Doodle VR',
 		link: '/doodlevr',

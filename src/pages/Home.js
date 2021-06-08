@@ -17,6 +17,7 @@ import ProjectCard from '../components/ProjectCard';
 import { Link } from 'react-router-dom';
 import InteractiveHeader from './../components/InteractiveHeader';
 import projectData from './../projectData';
+import ScrollingBar from '../components/shared/ScrollingBar';
 
 const Header = styled(Grid)`
 	color: #202020;
@@ -102,12 +103,10 @@ const Home = () => {
 					</Header>
 				)}
 			</Container>
+			<ScrollingBar text="Featured Work" icon="ArrowS"></ScrollingBar>
 			<SelectedProjects>
 				<Container>
 					<Grid>
-						<ProjectsTitle>
-							<StyledH3>Featured Work</StyledH3>
-						</ProjectsTitle>
 						{projectData.map((project) => (
 							<Col12 key={project.projectName}>
 								<StyledLink to={project.link}>
@@ -115,7 +114,8 @@ const Home = () => {
 										title={project.title}
 										description={project.description}
 										category={project.category}
-										img={project.img}></ProjectCard>
+										img={project.img}
+										imgHover={project.imgHover}></ProjectCard>
 								</StyledLink>
 							</Col12>
 						))}

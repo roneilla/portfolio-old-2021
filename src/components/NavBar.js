@@ -11,15 +11,15 @@ import { Link } from 'react-router-dom';
 const Nav = styled.nav`
 	padding: 2rem 2rem;
 	background-color: transparent;
+	z-index: 10001;
 `;
 
 const NavMenu = styled.ul`
 	list-style-type: none;
 	display: inline-flex;
-	justify-content: space-between;
+	justify-content: flex-end;
 	float: right;
 	margin-right: 8rem;
-	width: 50%;
 	@media (max-width: 600px) {
 		display: none;
 	}
@@ -27,7 +27,7 @@ const NavMenu = styled.ul`
 
 const NavItem = styled.li`
 	list-style-type: none;
-	margin: 0 1rem;
+	margin: 0 2rem;
 `;
 
 const StyledLink = styled(Link)`
@@ -87,11 +87,11 @@ const NavBar = () => {
 						Work
 					</StyledLink>
 				</NavItem>
-				<NavItem>
+				{/* <NavItem>
 					<StyledLink primary="true" to="/services">
 						Services
 					</StyledLink>
-				</NavItem>
+				</NavItem> */}
 				<NavItem>
 					<StyledLink primary="true" to="/about">
 						About
